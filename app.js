@@ -36,7 +36,6 @@ app.use(mongoSanitize());
 app.use(xss());
 app.use(express.json());
 app.use(express.static("public"));
-app.use(morgan("tiny"));
 app.use(cookieParser(process.env.JWT_SECRET));
 app.use(fileUpload());
 app.use("/", mainRouter);
